@@ -199,9 +199,9 @@ class Quilt2:
 
 #ensembles = ['Tirthak', 'Shane', 'Joan']#'Paul', 'Larry', 'Jordan', 'Sam']
 ensembles = ['Tirthak','Shane','Joan']
-for member in ensembles:
-  ens = Quilt2('Tirthak')
-  ens.train(train_data, train_labels)
+#for member in ensembles:
+ens = Quilt2('Tirthak')
+ens.train(train_data, train_labels)
 
 
 correct = 0
