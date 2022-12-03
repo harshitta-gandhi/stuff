@@ -120,7 +120,7 @@ def perform_pca(keep_digits=list(range(16)), pca_dims=16 ):
     pca = PCA(pca_dims)
     pca.fit(x_train)
     approximation = pca.inverse_transform(pca.transform(x_train))
-
+    normalize = preprocessing.normalize(x_train)
 
 #defining_the_model
 class Quilt2:
