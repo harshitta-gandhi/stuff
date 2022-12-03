@@ -121,6 +121,7 @@ def perform_pca(keep_digits=list(range(16)), pca_dims=16 ):
     pca.fit(x_train)
     approximation = pca.inverse_transform(pca.transform(x_train))
     normalize = preprocessing.normalize(x_train)
+perform_pca(keep_digits=list(range(16)), pca_dims=16 )
 
 #defining_the_model
 class Quilt2:
@@ -169,7 +170,7 @@ class Quilt2:
           AngleEmbedding(features=np.reshape(features[i:i+2], [-1]).astype('float64'), wires=range(num_qubits))
         return [qml.expval(qml.PauliZ(i)) for i in wires]
 
-        #learn("x,y", image)
+        learn("x,y", image)
 
     def eval(self, images, labels):
       bias = {0: 1, 1: 1, 2: 1, 3:1}
@@ -219,7 +220,3 @@ for i,j in zip(test_labels, guesses):
   if np.argmax(i) == j:
     correct +=1
 print(f'Overall Accuracy: {correct/len(test_labels)}')
-  
-
-
-
